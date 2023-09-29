@@ -2,7 +2,6 @@ import { Box, Text, Input, Button, Center } from "@chakra-ui/react";
 import { useState } from "react";
 import { useColorMode } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
 const Home = ({ socket }) => {
   const [value, setValue] = useState("");
