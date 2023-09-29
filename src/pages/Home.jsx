@@ -1,6 +1,5 @@
 import { Box, Text, Input, Button, Center } from "@chakra-ui/react";
 import { useState } from "react";
-import { AppContainer } from "../components/common";
 import { useColorMode } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
@@ -33,7 +32,8 @@ const Home = ({ socket }) => {
         w={"100%"}
       >
         <Button onClick={toggleColorMode} mb={4}>
-          {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          {/* {colorMode === "light" ? <MoonIcon /> : <SunIcon />} */}
+          {colorMode === "light" ? "Dark" : "Light"}
         </Button>
         <Text fontSize="xl" mb={4}>
           닉네임: {value}
