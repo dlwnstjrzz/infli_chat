@@ -25,7 +25,7 @@ const ChatFooter = ({ socket }) => {
     setMessage("");
   };
   return (
-    <Box position={"fixed"} zIndex={2} bottom={0} left={0} w={"100%"} px={4}>
+    <Box position={"fixed"} zIndex={2} bottom={5} left={0} w={"100%"} px={4}>
       <InputGroup size="md">
         <Input
           pr="4.5rem"
