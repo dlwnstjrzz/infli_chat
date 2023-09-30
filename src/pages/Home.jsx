@@ -32,9 +32,9 @@ const Home = ({ socket }) => {
       >
         <Button onClick={toggleColorMode} mb={4}>
           {/* {colorMode === "light" ? <MoonIcon /> : <SunIcon />} */}
-          {colorMode === "light" ? "Dark" : "Light"}
+          {colorMode === "light" ? "어둡게 입장하기 👻" : "밝게 입장하기 👼🏻"}
         </Button>
-        <Text fontSize="xl" mb={4}>
+        <Text fontSize="xl" mb={4} fontWeight={700}>
           닉네임: {value}
         </Text>
         <Input
