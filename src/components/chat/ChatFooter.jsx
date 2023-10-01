@@ -6,20 +6,20 @@ import {
   Button,
   Box,
 } from "@chakra-ui/react";
-import colorList from "../../mock/color";
 
 const ChatFooter = ({ socket }) => {
   const [message, setMessage] = useState("");
 
   const handleSendMessage = (e) => {
     e.preventDefault();
+    console.log(23, socket);
     if (message.trim()) {
       socket.emit("message", {
         text: message,
         name: socket.name,
         id: `${socket.id}${Math.random()}`,
         socketID: socket.id,
-        color: colorList[Math.floor(Math.random() * 8)],
+        color: socket.color,
       });
     }
     setMessage("");
