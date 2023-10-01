@@ -2,6 +2,7 @@ import { Box, Text, Input, Button, Center } from "@chakra-ui/react";
 import { useState } from "react";
 import { useColorMode } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import colorList from "../mock/color";
 
 const Home = ({ socket }) => {
   const [value, setValue] = useState("");
@@ -16,6 +17,7 @@ const Home = ({ socket }) => {
     socket.emit("enter", {
       nickname: value,
       socketID: socket.id,
+      color: colorList[Math.floor(Math.random() * 8)],
     });
     navigate("/chat");
   };
